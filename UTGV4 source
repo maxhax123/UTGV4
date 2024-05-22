@@ -24,7 +24,7 @@ Main_:CreateButton(
     "",
     "",
     function()
-        _G.DisableFlingHealthBar = true
+        DisableFlingHealthBar = true
     end
 )
 
@@ -36,7 +36,7 @@ Main_:CreateButton(
     "",
     "",
     function()
-        _G.DisableFlingHealthBar = false
+        DisableFlingHealthBar = false
     end
 )
 
@@ -48,7 +48,7 @@ Main_:CreateButton(
     "",
     "",
     function()
-        _G.DisableFX = true
+        DisableFX = true
     end
 )
 
@@ -60,7 +60,7 @@ Main_:CreateButton(
     "",
     "",
     function()
-        _G.DisableFX = false
+        DisableFX = false
     end
 )
 
