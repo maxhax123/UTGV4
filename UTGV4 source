@@ -84,8 +84,7 @@ local scripts = {
     {Name = "sniper", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"},
     {Name = "star glitcher", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Star%20Glitcher"},
     {Name = "studio dummy", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"}
-    {Name = "wallwalker", Url = "loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()"}
-}
+    }
 
 -- Create buttons for each script
 for _, script in ipairs(scripts) do
