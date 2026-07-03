@@ -86,7 +86,8 @@ local scripts = {
     {Name = "sad killer", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sadist%20Genocider"},
     {Name = "sniper", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Sniper"},
     {Name = "star glitcher", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Star%20Glitcher"},
-    {Name = "studio dummy", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"}
+    {Name = "studio dummy", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Studio%20Dummy"},
+    {Name = "sin dragon", Url = "https://raw.githubusercontent.com/GenesisFE/Genesis/refs/heads/main/Loadstrings/Sin%20Dragon"}
     }
 
 -- Create buttons for each script
