@@ -114,4 +114,4 @@ Main_:CreateButton(
         loadstring(game:HttpGet("https://raw.githubusercontent.com/GenesisFE/Genesis/main/Obfuscations/Neko"))()
     end
 )
-loadstring(game:HttpGet("https://pastefy.app/hiqOCmVd/raw"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/maxhax123/UTGV4/refs/heads/main/Resetter"))()
