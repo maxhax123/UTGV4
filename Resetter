@@ -1,1 +1,57 @@
 
+-- Create a new ScreenGui instance to hold the GUI elements
+local newGui = Instance.new("ScreenGui")
+newGui.Name = "NewGui"
+newGui.ResetOnSpawn = false -- Prevent resetting on spawn
+newGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+newGui.DisplayOrder = 10 -- Ensure GUI is on top of other UI elements
+
+-- Create a TextButton instance as a child of the ScreenGui
+local newButton = Instance.new("TextButton")
+newButton.Name = "NewButton"
+newButton.Size = UDim2.new(0, 200, 0, 50)
+newButton.AnchorPoint = Vector2.new(0, 1) -- Anchored to bottom left corner
+newButton.Position = UDim2.new(0, 10, 1, -70) -- Offset from bottom left corner
+newButton.Text = "Update avatar"
+newButton.Parent = newGui
+
+-- Create a TextBox for inputting wait time
+local waitTimeInput = Instance.new("TextBox")
+waitTimeInput.Name = "WaitTimeInput"
+waitTimeInput.Size = UDim2.new(0, 100, 0, 20)
+waitTimeInput.Position = UDim2.new(0, 10, 1, -30) -- Offset from bottom left corner
+waitTimeInput.Parent = newGui
+waitTimeInput.PlaceholderText = "Enter wait time"
+waitTimeInput.Text = "5.6734927"
+
+-- Function to save the player's current position
+local function SavePosition()
+    local player = game.Players.LocalPlayer
+    player:SetAttribute("SavedPosition", player.Character.HumanoidRootPart.Position)
+    print("Position saved at:", player:GetAttribute("SavedPosition"))
+end
+
+-- Function to teleport the player back to the saved position
+local function TeleportToSavedPosition()
+    local player = game.Players.LocalPlayer
+    local savedPosition = player:GetAttribute("SavedPosition")
+    if savedPosition then
+        player.Character:MoveTo(savedPosition)
+        print("Teleported back to saved position at:", savedPosition)
+    else
+        print("No saved position available.")
+    end
+end
+
+-- Function to handle the button click
+local function ButtonClicked()
+    local player = game.Players.LocalPlayer
+    SavePosition() -- Save the current position
+    player.Character:BreakJoints() -- Kill the player
+    local waitTime = tonumber(waitTimeInput.Text) or 5.6734927 -- Default wait time
+    wait(waitTime) -- Wait for the specified time
+    TeleportToSavedPosition() -- Teleport the player back
+end
+
+-- Connect the button click event to the ButtonClicked function
+newButton.MouseButton1Click:Connect(ButtonClicked)
