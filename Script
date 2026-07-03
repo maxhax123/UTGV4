@@ -4,7 +4,7 @@ local Main_ = libary:CreateMain()
 
 -- Credit button at the top
 Main_:CreateButton(
-    "This GUI was by Blukezz, but Max added these buttons",
+    "This Repo is by diggadoodog",
     "none",
     "",
     "",
